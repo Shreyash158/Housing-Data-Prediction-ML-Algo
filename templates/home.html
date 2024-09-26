@@ -1,3 +1,42 @@
-<h1>
-    Hello World
-</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ML API </title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" type="text/css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather" type="text/css">
+
+
+</head> 
+
+<body>
+    <div class="login">
+        <h1>Housing-Data-Prediction-ML-Algo</h1>
+
+        <form action="{{ url_for('predict')}}" method="post">
+
+            <input type="text" name="MedInc" placeholder="MedInc" required="required" /> <br>
+            <input type="text" name="HouseAge" placeholder="HouseAge" required="required" /> <br>
+            <input type="text" name="AveRooms" placeholder="AveRooms" required="required" /> <br>
+            <input type="text" name="AveBedrms" placeholder="AveBedrms" required="required" /> <br>
+            <input type="text" name="Population" placeholder="Population" required="required" /> <br>
+            <input type="text" name="AveOccup" placeholder="AveOccup" required="required" /> <br>
+            <input type="text" name="Latitude" placeholder="Latitude" required="required" /> <br>
+            <input type="text" name="Longitude" placeholder="Longitude" required="required" /> <br>
+ 
+   
+
+    <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+    </form>
+
+    <br>
+    <br>
+    </div>
+
+    {{prediction_text}}
+</body>
+</html>
